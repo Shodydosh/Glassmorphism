@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.4s ease;;
+}
+
+body{
+    /* 100vh means that the initial body height will take 100% of the viewport height, 
+    whereas the use of min-height instead of height will let 
+    the body element grow even more if necessary */
+    height: 100vh;
+    display: border-box;
+    background-color: black;
+
+}
+
+/*! NAV */
+
+#nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80px;
+    width: 100%;
+    border-bottom: 0.5px solid #FFF;
+    background-color: black;
+}
+
+#nav .nav-bar{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav .nav-bar .name a{
+    font-size: 25px;
+    font-weight: 500;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.name:hover {
+    transform: translateX(5px);
+}
+
+.nav-bar .nav-links{
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar .nav-links li{
+    margin: 0 10px;
+    list-style: none;
+}
+
+.nav-links li a{
+    position: relative;
+    font-size: 15px;
+    font-weight: 400;
+    color: #FFF;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.nav-links .reg {
+    color: #fff;
+    font-weight: 500;
+    background-color: black;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.fa {
+    padding: 10px;
+    font-size: 20px;
+    width: 50px;
+    text-align: center;
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+  }
+
+.fa:hover, .reg:hover {
+    opacity: 0.7;
+    transform: translateY(-5px)
+}
+
+
+/*! BODY */
+
+.content {
+    margin-top: 80px;
+    background-color: rgb(175, 23, 23);
+}
