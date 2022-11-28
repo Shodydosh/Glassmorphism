@@ -189,14 +189,19 @@ body{
     background: transparent;
 }
 
+.list-grid .grid-item .img-container {
+    width: 100%;
+    height: 100%;
+}
+
 .list-grid .grid-item .grid-img .item-img {
-    scale: 0.9;
+    scale: 0.95;
     width: 100%;
     cursor: pointer;
 }
 
 .list-grid .grid-item .grid-img .item-img:hover {
-    scale: 1;
+    /* scale: 1; */
     transition: all 1s ease;
 }
 
@@ -212,12 +217,12 @@ body{
 
 .grid-wrapper .grid-title {
     cursor: pointer;
-    transition: all 1s ease;
+    transition: scale 1s ease;
     font-size: 25px;
     font-weight: 500;
 }
 .grid-wrapper .grid-title:hover {
-    scale: 1.1;
+    scale: 1.2;
 }
 
 .grid-wrapper .grid-date {
