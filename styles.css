@@ -49,12 +49,12 @@ body{
     font-weight: 500;
     color: #FFF;
     text-decoration: none;
+    transition: all 1s ease;
 }
 
 .name:hover {
-    transform: translateX(20px);
-    transition: transform 1s ease;
-
+    transform: translateX(10px);
+    transition: all 1s ease;
 }
 
 .nav-bar .nav-links{
