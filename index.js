@@ -1,4 +1,5 @@
 let slideIndex = 1;
+autoSlidin();
 
 // Get the button:
 let mybutton = document.getElementById("btt-btn");
@@ -59,11 +60,10 @@ function showSlides(n) {
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  console.log(slides);
-  console.log(slideIndex - 1);
-  console.log(slides[slideIndex - 1]);
-  slides[slideIndex - 1].style.display = " block";
+
+  slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
+  //   setTimeout(autoSlidin(slideIndex + 1), 4000);
 }
 
 function autoSlidin() {
@@ -77,5 +77,14 @@ function autoSlidin() {
     slideIndex = 1;
   }
   slides[slideIndex - 1].style.display = "block";
-  setTimeout(autoSlidin, 2000); // Change image every 2 seconds
+
+  let dots = document.getElementsByClassName("dot");
+
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+  setTimeout(autoSlidin, 4000); // Change image every 2 seconds
 }
