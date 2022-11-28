@@ -5,7 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    transition: all 0.4s ease;;
+    /* transition: all 0.4s ease; */
 }
 
 body{
@@ -21,17 +21,19 @@ body{
 /*! NAV */
 
 #nav {
+    z-index: 99;
     position: fixed;
     top: 0;
     left: 0;
     height: 80px;
     width: 100%;
-    border-bottom: 0.5px solid #FFF;
+    box-shadow: rgba(213, 213, 213, 0.5) 0px 14px 28px, rgba(91, 91, 91, 0.12) 0px 10px 10px;
+    /* border-bottom: 0.5px solid #FFF; */
     background-color: black;
 }
 
 #nav .nav-bar{
-    position: relative;
+    position: absolute;
     height: 100%;
     width: 100%;
     background-color: black;
@@ -51,6 +53,8 @@ body{
 
 .name:hover {
     transform: translateX(5px);
+    transition: transform 1s ease;
+
 }
 
 .nav-bar .nav-links{
@@ -94,13 +98,105 @@ body{
 
 .fa:hover, .reg:hover {
     opacity: 0.7;
-    transform: translateY(-5px)
+    transform: translateY(-3px);
+    transition: transform 1s ease;
 }
 
+/*! CONTENT WRAPPER */
+.content-wrapper {
+    background-color: bisque;
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+}
 
-/*! BODY */
+/*! CONTENT */
 
 .content {
-    margin-top: 80px;
-    background-color: rgb(175, 23, 23);
+
+    background-color: black;
+    color: #fff;
+    padding: 15px
 }
+
+.content h2 {
+    font-size: 50px;
+}
+
+.content .content-category {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    flex-wrap: wrap; 
+    position: relative;
+    margin-top: 0;
+    list-style: none;
+    /* sets whether flex items are forced onto one line or can wrap onto multiple lines. 
+    If wrapping is allowed, it sets the direction that lines are stacked. */
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #fff;
+}
+
+.content .content-category .category-btn {
+    text-decoration: none;
+    color: #FFF;
+    margin-right: 10px;
+}
+
+.category-btn:hover {
+    opacity: 0.8;
+}
+
+.content .content-category .breadcrumb-separator {
+    margin-right: 10px;
+}
+
+.list-grid {
+    width: 100%;
+    /* float: left; */
+    row-gap: 20px;
+    justify-content: space-between;
+    display: flex;
+    background-color: black;
+    transition: opacity 1s ease,transform 1s ease;
+    flex-wrap: wrap; 
+    padding: 20px 0px;
+}
+
+.list-grid .grid-item {
+    border-radius: 10px;
+    border: 1px solid #fff;
+    max-width: 24%;
+    transition: opacity 1s ease,transform 1s ease;
+}
+
+.list-grid .grid-item a {
+    background: transparent;
+}
+
+.list-grid .grid-item .grid-img .item-img {
+    width: 100%;
+}
+.grid-wrapper {
+    padding: 10px;
+}
+
+.grid-wrapper div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-wrapper .grid-title {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.grid-wrapper .grid-date {
+    font-size: 15px;
+    opacity: 0.7;
+}
+
+
