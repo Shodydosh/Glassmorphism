@@ -127,7 +127,7 @@ body::-webkit-scrollbar-thumb
     /* background-color: rgb(255, 255, 255); */
     display: flex;
     justify-content: center;
-    height: 500px;
+    height: 800px;
     max-width: 100%;
     position: relative;
     margin: auto;
@@ -140,7 +140,7 @@ body::-webkit-scrollbar-thumb
   }
 
   .sld-img {
-    width: 500px;
+    width: 800px;
   }
   
   /* Next & previous buttons */
@@ -180,6 +180,12 @@ body::-webkit-scrollbar-thumb
   }
   
   /* The dots/bullets/indicators */
+  .dot-container {
+    margin-top: 20px;
+    /* border-bottom: 1px solid #fff; */
+    padding-bottom: 40px;
+  }
+
   .dot {
     cursor: pointer;
     height: 10px;
@@ -216,10 +222,9 @@ body::-webkit-scrollbar-thumb
 /*! CONTENT */
 
 .content {
-
     background-color: black;
     color: #fff;
-    padding: 15px
+    padding: 30px;
 }
 
 .content h2 {
@@ -260,7 +265,7 @@ body::-webkit-scrollbar-thumb
     margin-top: 20px;
     width: 100%;
     /* float: left; */
-    row-gap: 20px;
+    row-gap: 30px;
     justify-content: space-between;
     display: flex;
     background-color: black;
