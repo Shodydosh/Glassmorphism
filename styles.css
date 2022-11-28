@@ -231,4 +231,43 @@ body{
     opacity: 0.7;
 }
 
+/* !BACK TO TOP  */
 
+.back-to-top {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.btt-btn {
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/*! FOOTER WRAPPER */
+
+.footer-wrapper {
+    margin-top: 30px;
+    border-top: 1px solid #FFF;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    position: relative;
+    width: 100%;
+}
+
+/*! FOOTER FOOT */
+
+.footer-foot {
+    border-top: 1px solid #FFF;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    position: relative;
+    width: 100%;
+}
