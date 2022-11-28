@@ -104,7 +104,7 @@ body{
 
 /*! CONTENT WRAPPER */
 .content-wrapper {
-    background-color: bisque;
+    background-color: rgb(0, 0, 0);
     margin-top: 70px;
     display: flex;
     justify-content: center;
@@ -154,6 +154,7 @@ body{
 }
 
 .list-grid {
+    margin-top: 20px;
     width: 100%;
     /* float: left; */
     row-gap: 20px;
@@ -162,7 +163,7 @@ body{
     background-color: black;
     transition: opacity 1s ease,transform 1s ease;
     flex-wrap: wrap; 
-    padding: 20px 0px;
+    padding: 20px;
 }
 
 .list-grid .grid-item {
@@ -186,31 +187,41 @@ body{
 
 .list-grid .grid-item a {
     background: transparent;
-    cursor: pointer;
 }
 
 .list-grid .grid-item .grid-img .item-img {
+    scale: 0.9;
     width: 100%;
+    cursor: pointer;
 }
+
+.list-grid .grid-item .grid-img .item-img:hover {
+    scale: 1;
+    transition: all 1s ease;
+}
+
 .grid-wrapper {
     padding: 10px;
 }
 
 .grid-wrapper div {
-    
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: translateZ(20px)
 }
 
 .grid-wrapper .grid-title {
+    cursor: pointer;
     transition: all 1s ease;
     font-size: 25px;
     font-weight: 500;
 }
+.grid-wrapper .grid-title:hover {
+    scale: 1.1;
+}
 
 .grid-wrapper .grid-date {
+    cursor: pointer;
     font-size: 15px;
     opacity: 0.7;
 }
