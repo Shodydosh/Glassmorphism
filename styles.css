@@ -17,25 +17,25 @@ body{
     background-color: black;
 
 }
+body::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);;
 
-html 
-    ::-webkit-scrollbar {
-        width: 12px;
-    }
-     
-    ::-webkit-scrollbar-track {
-        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1); 
-        border-radius: 10px;
-    }
-     
-    ::-webkit-scrollbar-thumb {
-        border-radius: 10px;
-        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
-        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1); 
-    }
+	background-color: #000000;
+}
 
+body::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
 
+body::-webkit-scrollbar-thumb
+{
+	background-color: #555555;
+	border: 2px solid #555555;
+}
 
 /*! NAV */
 
@@ -122,8 +122,88 @@ html
 }
 
 /*! CONTENT WRAPPER */
+
+.slideshow-container {
+    /* background-color: rgb(255, 255, 255); */
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    margin-top: 70px;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+
+  .sld-img {
+    width: 500px;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  .prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #717171;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #bbb;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
 .content-wrapper {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     margin-top: 70px;
     display: flex;
     justify-content: center;
@@ -277,7 +357,13 @@ html
 }
 
 .btt-btn:hover {
-    opacity: 0.8;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(255, 255, 255, 0.67);
+    -moz-box-shadow:    0px 0px 30px 0px rgba(255, 255, 255, 0.67);
+    box-shadow:         0px 0px 30px 0px rgba(255, 255, 255, 0.67);
+    /* opacity: 0.8; */
 }
 .btt-btn:active {
     opacity: 0.9;
