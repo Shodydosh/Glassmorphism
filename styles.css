@@ -52,7 +52,7 @@ body{
 }
 
 .name:hover {
-    transform: translateX(5px);
+    transform: translateX(20px);
     transition: transform 1s ease;
 
 }
@@ -167,13 +167,26 @@ body{
 
 .list-grid .grid-item {
     border-radius: 10px;
-    border: 1px solid #fff;
     max-width: 24%;
-    transition: opacity 1s ease,transform 1s ease;
+    transition: opacity 1s ease;
+    transform: perspective(1000px);
+}
+
+.list-grid .grid-item:hover {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(255, 255, 255, 0.67);
+    -moz-box-shadow:    0px 0px 30px 0px rgba(255, 255, 255, 0.67);
+    box-shadow:         0px 0px 30px 0px rgba(255, 255, 255, 0.67);
+    z-index: 55;
+    transition: all 0.8s ease;
+    /* box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 60px 30px; */
 }
 
 .list-grid .grid-item a {
     background: transparent;
+    cursor: pointer;
 }
 
 .list-grid .grid-item .grid-img .item-img {
@@ -184,12 +197,16 @@ body{
 }
 
 .grid-wrapper div {
+    
     display: flex;
     align-items: center;
     justify-content: center;
+    transform: translateZ(20px)
 }
 
 .grid-wrapper .grid-title {
+    transition: all 1s ease;
+
     font-size: 25px;
     font-weight: 500;
 }
