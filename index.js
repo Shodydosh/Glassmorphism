@@ -24,13 +24,13 @@ function topFunction() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-$(document).ready(function () {
-  if (!$.browser.webkit) {
-    $(".wrapper").html("<p>Sorry! Non webkit users. :(</p>");
-  }
-});
+// $(document).ready(function () {
+//   if (!$.browser.webkit) {
+//     $(".wrapper").html("<p>Sorry! Non webkit users. :(</p>");
+//   }
+// });
 
-//! SLIDE
+//! SLIDER
 
 showSlides(slideIndex);
 
@@ -88,3 +88,39 @@ function autoSlidin() {
   dots[slideIndex - 1].className += " active";
   setTimeout(autoSlidin, 4000); // Change image every 2 seconds
 }
+
+//! Random img render
+
+const imgContainer = document.getElementById("img-container");
+render();
+
+function render() {
+  let content = "";
+
+  for (let i = 0; i < 40; i++) {
+    content += `
+    <div class="grid-item" data-tilt data-tilt-glare data-tilt-max-glare="0.3" data-tilt-reverse="true" href="" >
+        <a href=""></a>
+        <figure class="grid-img">
+            <div>
+                <img class="item-img" src="https://picsum.photos/1080/1080?random=3${i}" alt="" loading="lazy">
+            </div>
+        </figure>
+        <section>
+            <div class="grid-wrapper">
+                <div class="grid-title">Picture ${i + 1}</div>
+                <div class="grid-date">Shodydosh</div>
+            </div>
+        </section>
+    </div>
+    `;
+  }
+
+  imgContainer.innerHTML = content;
+}
+
+document.getElementById("rerender-btn").addEventListener("click", render);
+
+document.getElementById("rerender-btn").addEventListener("click", () => {
+  console.log("clicked!");
+});

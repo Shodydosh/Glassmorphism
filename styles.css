@@ -277,8 +277,8 @@ body::-webkit-scrollbar-thumb
 .list-grid .grid-item {
     border-radius: 10px;
     max-width: 24%;
-    transition: opacity 1s ease;
     transform: perspective(1000px);
+    transition: all 1s ease;
 }
 
 .list-grid .grid-item:hover {
@@ -376,6 +376,28 @@ body::-webkit-scrollbar-thumb
 }
 .btt-btn:active {
     opacity: 0.9;
+}
+
+.rerender-btn {
+    border: 1px solid #fff; /* Remove borders */
+    outline: none; /* Remove outline */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 10px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+    margin-top: 15px;
+    margin-left: 5px;
+    background-color: black;
+    color: white;
+}
+
+.rerender-btn:hover {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(255, 255, 255, 0.67);
+    -moz-box-shadow:    0px 0px 30px 0px rgba(255, 255, 255, 0.67);
+    box-shadow:         0px 0px 30px 0px rgba(255, 255, 255, 0.67);
 }
 
 /*! FOOTER WRAPPER */

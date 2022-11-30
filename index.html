@@ -50,10 +50,7 @@
         <span class="dot active" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
-      </div>
-    <!-- <div class="content-wrapper" style="padding-top: calc(10vmax / 10); padding-bottom: calc(10vmax / 10);">
-        <img style="display:flex; align-items: center; width: 500px" src="assets/imgs/wrapper.jpg" alt="">
-    </div> -->
+    </div>
     <div class="content">
         <h2 class="dzai">MY PROJECTS</h2>
         <ul class="content-category">
@@ -234,6 +231,16 @@
         </div>
     </div>
 
+    <div class="content">
+        <h2 class="dzai">Random Img</h2>
+        <button onclick="render()" class="rerender-btn" id="rerender-btn">Re-render images</button>
+        <ul class="content-category"></ul>
+
+        <div class="list-grid" id="img-container">
+
+        </div>
+    </div>
+
     <div class="back-to-top">
         <button onclick="topFunction()" id="btt-btn" class="btt-btn">Back to top</button>
     </div>
@@ -256,6 +263,6 @@
     <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.3/vanilla-tilt.min.js"></script> -->
 </body>
 
-<script src="vanillaTilt.js"></script>
 <script src="index.js"></script>
+<script src="vanillaTilt.js"></script>
 </html>
