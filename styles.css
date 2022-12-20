@@ -278,7 +278,7 @@ body::-webkit-scrollbar-thumb
     border-radius: 10px;
     max-width: 24%;
     transform: perspective(1000px);
-    transition: all 1s ease;
+    /* transition: all 1s ease; */
 }
 
 .list-grid .grid-item:hover {
